@@ -5,6 +5,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CardCollection from '../CardCollection';
 
+
 const Container = styled.div`
   min-height: 100%;
   margin: 0 auto;

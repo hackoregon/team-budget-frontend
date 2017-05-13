@@ -106,12 +106,12 @@ class CardCollection extends React.Component {
   //   })
   // }
   //
-  // getAllData () {
-  //   this.getData(SACodeUrl, "serviceAreaCodes");
-  //   this.getData(serviceAreaUrl, "serviceAreas");
-  //   this.getData(bureauCodeUrl, "bureauCodes");
-  //   this.getData(bureausUrl, "bureaus");
-  // }
+  getAllData () {
+    this.getData(SACodeUrl, "serviceAreaCodes");
+    this.getData(serviceAreaUrl, "serviceAreas");
+    this.getData(bureauCodeUrl, "bureauCodes");
+    this.getData(bureausUrl, "bureaus");
+  }
   onBureauSelect (obj) {
     this.setState({ currentBureau: obj.value})
   }
@@ -134,8 +134,8 @@ class CardCollection extends React.Component {
     const marks = Object.assign({}, ...markObjects);
 
     return (
-      <div>
-        <StickyContainer>
+      <div className="budget-card-collection">
+        <StickyContainer className="budget-card-collection__sticky-container">
           <div className="budget-card-collection__intro-hero">
             <h1 className="budget-heading Rubik">Run the Numbers</h1>
             <p className="budget_card_collection__intro-hero-text">

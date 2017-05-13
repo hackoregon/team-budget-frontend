@@ -57,8 +57,8 @@ class CardCollection extends React.Component {
       currentServiceArea: "PS",
       currentBureau: "FR",
     }
-    // this.getData = this.getData.bind(this);
-    // this.getAllData = this.getAllData.bind(this);
+    this.getData = this.getData.bind(this);
+    this.getAllData = this.getAllData.bind(this);
     this.onSliderChange = this.onSliderChange.bind(this);
     // this.getServiceAreaByFiscalYear = this.getServiceAreaByFiscalYear.bind(this);
     // this.getSaSumByFiscalYear = this.getSaSumByFiscalYear.bind(this);
@@ -67,9 +67,9 @@ class CardCollection extends React.Component {
 
   }
 
-  // componentDidMount() {
-  //   this.getAllData();
-  // }
+  componentDidMount() {
+    this.getAllData();
+  }
 
 
   // getServiceAreaByFiscalYear() {
@@ -90,22 +90,22 @@ class CardCollection extends React.Component {
   //     return saSumByYear;
   // }
   //
-  // getData (url, dataName) {
-  //   this.setState({ isLoading: true })
-  //   fetch(url)
-  //   .then(res => res.json())
-  //   .then(resData => {
-  //   this.setState({data: {
-  //     ...this.state.data,
-  //     [dataName]: resData.results
-  //   },  isLoading: false});
-  //   })
-  //   .catch(err => {
-  //     console.error(err)
-  //     this.setState({isLoading: false});
-  //   })
-  // }
-  //
+  getData (url, dataName) {
+    this.setState({ isLoading: true })
+    fetch(url)
+    .then(res => res.json())
+    .then(resData => {
+    this.setState({data: {
+      ...this.state.data,
+      [dataName]: resData.results
+    },  isLoading: false});
+    })
+    .catch(err => {
+      console.error(err)
+      this.setState({isLoading: false});
+    })
+  }
+
   getAllData () {
     this.getData(SACodeUrl, "serviceAreaCodes");
     this.getData(serviceAreaUrl, "serviceAreas");

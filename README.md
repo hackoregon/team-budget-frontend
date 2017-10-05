@@ -2,6 +2,13 @@
 
 [![Build Status](https://travis-ci.org/hackoregon/team-budget-frontend.svg?branch=master)](https://travis-ci.org/hackoregon/team-budget-frontend)
 
+### Update - This repo is now a package in the civic monorepo
+#### Do not make updates in this repo - for updates and changes, use (https://github.com/hackoregon/civic.git)
+___
+
+
+
+
 ### Guide
 1. Get [Node 6.5 +](https://nodejs.org) - We recommend using [Node Version Manager](https://github.com/creationix/nvm#install-script).
 2. `git clone https://github.com/hackoregon/team-budget-frontend.git`.
